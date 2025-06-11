@@ -1,0 +1,31 @@
+Size,Type,Algorithm,Time(ms)
+1000,Random,Insertion Sort,3
+1000,Random,Quick Sort,0
+1000,Random,Merge Sort,1
+1000,Ascending,Insertion Sort,0
+1000,Ascending,Quick Sort,3
+1000,Ascending,Merge Sort,1
+1000,Descending,Insertion Sort,7
+1000,Descending,Quick Sort,12
+1000,Descending,Merge Sort,1
+3000,Random,Insertion Sort,32
+3000,Random,Quick Sort,0
+3000,Random,Merge Sort,5
+3000,Ascending,Insertion Sort,0
+3000,Ascending,Quick Sort,34
+3000,Ascending,Merge Sort,3
+3000,Descending,Insertion Sort,71
+3000,Descending,Quick Sort,81
+3000,Descending,Merge Sort,3
+5000,Random,Insertion Sort,125
+5000,Random,Quick Sort,1
+5000,Random,Merge Sort,6
+5000,Ascending,Insertion Sort,0
+5000,Ascending,Quick Sort,75
+5000,Ascending,Merge Sort,6
+5000,Descending,Insertion Sort,205
+5000,Descending,Quick Sort,207
+5000,Descending,Merge Sort,5
+20,Few Items,Insertion Sort,0
+20,Few Items,Quick Sort,0
+20,Few Items,Merge Sort,0
