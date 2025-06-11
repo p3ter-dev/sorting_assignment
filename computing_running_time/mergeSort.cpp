@@ -1,37 +1,34 @@
 #include <vector>
 using namespace std;
 
-vector<int> merge(const vector<int>& left, const vector<int>& right) {
-    vector<int> result;
-    int i = 0, j = 0;
-    while (i < left.size() && j < right.size()) {
-        if (left[i] < right[j]) {
-            result.push_back(left[i]);
-            i++;
+void merge(vector<int>& arr, int left, int mid, int right) {
+    vector<int> leftArr(arr.begin() + left, arr.begin() + mid + 1);
+    vector<int> rightArr(arr.begin() + mid + 1, arr.begin() + right + 1);
+
+    int i = 0, j = 0, k = left;
+
+    while (i < leftArr.size() && j < rightArr.size()) {
+        if (leftArr[i] <= rightArr[j]) {
+            arr[k++] = leftArr[i++];
         } else {
-            result.push_back(right[j]);
-            j++;
+            arr[k++] = rightArr[j++];
         }
     }
 
-    while (i < left.size()) {
-        result.push_back(left[i]);
-        i++;
-    }
-    while (j < right.size()) {
-        result.push_back(right[j]);
-        j++;
+    while (i < leftArr.size()) {
+        arr[k++] = leftArr[i++];
     }
 
-    return result;
+    while (j < rightArr.size()) {
+        arr[k++] = rightArr[j++];
+    }
 }
 
-vector<int> mergeSort(const vector<int>& arr) {
-    if (arr.size() <= 1) return arr;
-
-    int mid = arr.size() / 2;
-    vector<int> left(arr.begin(), arr.begin() + mid);
-    vector<int> right(arr.begin() + mid, arr.end());
-
-    return merge(mergeSort(left), mergeSort(right));
+void mergeSort(vector<int>& arr, int left, int right) {
+    if (left < right) {
+        int mid = left + (right - left) / 2;
+        mergeSort(arr, left, mid);
+        mergeSort(arr, mid + 1, right);
+        merge(arr, left, mid, right);
+    }
 }
