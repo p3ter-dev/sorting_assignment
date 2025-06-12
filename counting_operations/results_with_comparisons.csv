@@ -1,0 +1,10 @@
+Size,Type,InsertionSort_Time(ms),InsertionSort_Comparisons,QuickSort_Time(ms),QuickSort_Comparisons,MergeSort_Time(ms),MergeSort_Comparisons
+1000,Random,4,255614,0,10330,1,8692
+1000,Ascending,0,999,12,499500,0,5044
+1000,Descending,12,499500,8,499500,1,4932
+3000,Random,39,2284707,1,41151,3,30945
+3000,Ascending,0,2999,114,4498500,2,18076
+3000,Descending,74,4498500,74,4498500,2,16828
+5000,Random,105,6334024,1,74635,6,55189
+5000,Ascending,0,4999,330,12497500,4,32004
+5000,Descending,202,12497500,237,12497500,6,29804
